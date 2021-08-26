@@ -1,5 +1,4 @@
 #! /bin/bash
-#clone repository use fzf
 set -e
 
 gh repo clone $(gh repo list $1 --json nameWithOwner -q '.[].nameWithOwner' | fzf)
